@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             ParcelUuid pUuid = new ParcelUuid( UUID.fromString( getString( R.string.ble_uuid ) ) );
 
             AdvertiseData data = new AdvertiseData.Builder()
-                    .setIncludeDeviceName( true )
+                    .setIncludeDeviceName( false )
                     .addServiceUuid( pUuid )
                     .addServiceData( pUuid, "Data".getBytes(Charset.forName("UTF-8") ) )
                     .build();
